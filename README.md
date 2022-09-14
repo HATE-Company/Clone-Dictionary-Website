@@ -1,3 +1,3 @@
 # Clone-Sozluk
 
-Clone Sozluk | Mert#5587 
+Creating a Headline Page [Only Gold NFT Owners] | Mert#5587 
