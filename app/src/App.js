@@ -1,11 +1,25 @@
 import './App.scss';
+import BodyWrapper from './components/BodyWrapper/BodyWrapper';
+import HeaderMain from './components/HeaderMain/HeaderMain';
+import HeaderSecond from './components/HeaderSecond/HeaderSecond';
+import InnerBody from './components/InnerBody/InnerBody';
+import LeftFrame from './components/LeftFrame/LeftFrame';
+import MainWrapper from './components/MainWrapper/MainWrapper';
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+
+    <MainWrapper>
+    <HeaderMain />
+    <HeaderSecond />
+    <BodyWrapper>
+      <LeftFrame />
+      <InnerBody />
+
+    </BodyWrapper>
+    </MainWrapper>
+    
     </div>
   );
 }
