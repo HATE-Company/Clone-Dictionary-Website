@@ -1,0 +1,44 @@
+.secondheader{
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    padding: 0 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__sort{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 23%;
+
+        &__item{
+            display: flex;
+            height: 100%;
+            align-items: center;
+            & img{
+                height: 55%;
+            }
+        }
+       
+    }
+
+    &__search{
+        background-color: grey;
+        height: 70%;
+        width: 24%;
+
+        & input{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__create{
+        display: flex;
+        justify-content: space-between;
+        width: 17%;
+    }
+}

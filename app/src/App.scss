@@ -2,13 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  text-align: center;
+section{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 *{
   margin: 0;
+  box-sizing: border-box;
+  font-size: 18px!important;
 }
 
-html{
+.content{
+  display: flex;
+  width: 100%;
+  height: 100%;
 }

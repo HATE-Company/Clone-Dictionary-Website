@@ -1,0 +1,33 @@
+.leftframeitem{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+
+    &__tag{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.5rem;
+        background-color: #edeeee;
+        height: 2rem;
+        border: 1px solid black;
+        & img{
+            height: 55%;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__headline{
+        width: 100%;
+        display: none;
+        height: max-content;
+
+        &__item{
+            margin-left: 1rem;
+        background-color: #edeeee;
+
+            border: 1px solid black;
+        }
+    }
+}

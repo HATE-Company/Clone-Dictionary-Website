@@ -1,26 +1,21 @@
 import './App.scss';
-import BodyWrapper from './components/BodyWrapper/BodyWrapper';
-import HeaderMain from './components/HeaderMain/HeaderMain';
-import HeaderSecond from './components/HeaderSecond/HeaderSecond';
-import InnerBody from './components/InnerBody/InnerBody';
+import Body from './components/Body/Body';
 import LeftFrame from './components/LeftFrame/LeftFrame';
-import MainWrapper from './components/MainWrapper/MainWrapper';
+import MainHeader from './components/MainHeader/MainHeader';
+import SecondHeader from './components/SecondHeader/SecondHeader';
 
 function App() {
   return (
-    <div className="App">
-
-    <MainWrapper>
-    <HeaderMain />
-    <HeaderSecond />
-    <BodyWrapper>
+    <section>
+      <div className='headers'>
+      <MainHeader />
+      <SecondHeader />
+      </div>
+      <div className='content'>
       <LeftFrame />
-      <InnerBody />
-
-    </BodyWrapper>
-    </MainWrapper>
-    
-    </div>
+      <Body />
+      </div>
+    </section>
   );
 }
 

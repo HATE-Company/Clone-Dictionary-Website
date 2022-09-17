@@ -1,0 +1,63 @@
+.body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #edeeee;
+    position: relative;
+    justify-content: space-between;
+    padding: 0 7rem 0 4rem;
+
+
+    &__inner{
+        height: 100%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+
+        &__headlinearea{
+            position: relative;
+            width: 100%;
+            height: 4rem;
+            background-color: white;
+            margin: 1.5rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            padding-left: 3rem;
+            border-radius: 6px;
+
+
+            &__enterpost{
+                height: 100%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                padding-right: 0.5rem;
+                right: 0;
+                & img{
+                    height: 50%;
+                }
+            }
+
+            &__upvote{
+                position: absolute;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                left: 0.5rem;
+                & img{
+                    height: 49%;
+                }
+            }
+        }
+
+    }
+
+    &__leaderboard{
+        padding-top: 1.5rem;
+        height: 100%;
+        width: 24%;
+
+    }
+}
