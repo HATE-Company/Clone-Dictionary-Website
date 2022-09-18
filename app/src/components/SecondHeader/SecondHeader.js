@@ -31,13 +31,21 @@ const SecondHeader = (props) => {
 
             <div className="secondheader__search">
 
-                <input type={"text"}></input>
+                <input placeholder="headline, #tag, @writer" type={"text"}></input>
+                <img src={require("../../assets/010-search-interface-symbol.png")}></img>
 
             </div>
 
             <div className="secondheader__create">
-                <h1>create hashtag #</h1>
-                <h1>create headline +</h1>
+                <h1 style={{
+                    color:'#B026FF'
+                }}>create hashtag</h1>
+                <h1 className="hash" style={{
+                    color:'#B026FF'
+                }}>#</h1>
+                <h1>create headline</h1>
+                <h1 className="plus">+</h1>
+
             </div>
 
         </div>

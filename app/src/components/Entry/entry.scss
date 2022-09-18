@@ -1,31 +1,34 @@
 .entry{
     width: 100%;
-    height: 15rem;
+    height: 22rem;
     background-color: white;
     margin-bottom: 1rem;
     position: relative;
     border-radius: 6px;
+
     &__text{
-        padding: 1rem;
+        padding: 1.5rem;
     }
+
     &__footer{
         position: absolute;
         display: flex;
         width: 100%;
         height: 4rem;
-        bottom: 0;
+        bottom: 6rem;
+
         &__reply{
             height: 100%;
             display: flex;
             align-items: flex-end;
             position: absolute;
-            left: 3.5rem;
-            bottom: 0.7rem;
+            left: 4rem;
+            bottom: 1rem;
 
             & img{
                 height: 35%;
             }
-            & h1{
+            & p{
                 position: relative;
                 left: 1rem;
             }
@@ -37,16 +40,18 @@
         &__right{
             position: absolute;
             display: flex;
-            width: 22%;
+            width: 24%;
             right: 1rem;
             bottom: 1rem;
             justify-content: space-between;
             text-align: right;
             &__userpicture{
-                height: 35px;
-                width: 35px;
+                height: 40px;
+                width: 40px;
                 background-color: black;
                 border-radius: 50px;
+                position: relative;
+                top: 0.3rem;
             }
         }
 
@@ -56,10 +61,50 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0 0.5rem;
+            padding: 0 1rem;
+            bottom: 0.5rem;
+            position: relative;
             & img{
                 height: 50%;
             }
         }
     }
+}
+
+.replyarea{
+    position: absolute;
+    width: 100%;
+    height: 6rem;
+    
+    
+    bottom: 0;
+
+    &__inner{
+        width: 95%;
+        background-color: white;
+        height: 100%;
+        margin: 0 auto;
+        border-top: 1px solid black;
+        display: flex;
+        align-items: center;
+
+        & input{
+            width: 100%;
+            height: 3rem;
+            border-radius: 19px;
+            outline: none;
+            border: 1px solid grey;
+            background-color: #edeeee;
+            padding-left: 1rem;
+        }
+    }
+}
+
+.send{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    background-image: url("../../assets/download.png");
+    background-size: contain;
+    background-position: center;
 }

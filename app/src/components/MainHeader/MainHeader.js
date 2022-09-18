@@ -18,7 +18,7 @@ const MainHeader = (props) => {
                 <img src={require("../../assets/avatar.png")}></img>
                 <div className="mainheader__user__info">
                     <h1><b>nickname</b></h1>
-                    <h1>xxx karma</h1>
+                    <p>xxx karma</p>
 
                 </div>
             </div>

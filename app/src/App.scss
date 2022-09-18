@@ -8,12 +8,14 @@ section{
   display: flex;
   flex-direction: column;
   position: relative;
+
 }
 
 *{
   margin: 0;
   box-sizing: border-box;
   font-size: 18px!important;
+  font-family: 'Calibri';
 }
 
 .content{

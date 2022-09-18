@@ -1,9 +1,12 @@
 .leftframe{
     display: flex;
-    width: 36%;
-    overflow: auto;
+    width: 30%;
+    overflow-y: scroll;
     flex-direction: column;
-    position: relative;
+    position: fixed;
+    height: 100vh!important;
+    z-index: 1221;
+    top: 9rem;
 
     &__items{
         position: absolute;

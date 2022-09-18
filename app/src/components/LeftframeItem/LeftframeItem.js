@@ -4,14 +4,14 @@ import "./leftframeitem.scss"
 const LeftframeItem = (props) => {
 
     const [state, setState] = useState(true)
+    
+    const [ad, setAd] = useState(false)
 
     const dropdown = (event) => {
         console.log(event.target.parentElement.parentElement)
         if(state === true){
             event.target.parentElement.parentElement.querySelector('.leftframeitem__headline').style.display = 'block'
-        event.target.parentElement.style.background = 'radial-gradient(circle, rgba(238,129,249,1) 0%, rgba(120,16,130,1) 100%)'
-        event.target.parentElement.style.color = 'white'
-        event.target.style.filter = 'invert(100%)'
+    
 
             event.target.style.rotate = '90deg'
             setState(!state)
@@ -29,39 +29,41 @@ const LeftframeItem = (props) => {
 
     }
 
+
+
     return(
         <div className="leftframeitem">
-            <div className="leftframeitem__tag">
-            <h1>tag</h1>
+            <div className={"leftframeitem__tag "+(props.type.includes('ad')? "ad":"")}>
+            <p>{props.tag}</p>
             <img onClick={dropdown} src={require("../../assets/005-up-arrow-1.png")}></img>
             </div>
             <div className="leftframeitem__headline">
 
                 <div className="leftframeitem__headline__item">
-                <h1>headline</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
                 </div>
                 <div className="leftframeitem__headline__item">
-                <h1>headline</h1>
+                <p>headline</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
-                <h1>headline</h1>
+                <p>headline</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
-                <h1>headline</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
-                <h1>headline</h1>
+                <p>headline</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
-                <h1>headline</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
-                <h1>headline</h1>
+                <p>headline</p>
 
                 </div>
              

@@ -12,10 +12,10 @@ const Leaderboard = () => {
                 <h1>leaderboards</h1>
             </div>
             <div className="leaderboard__items">
-                <LeaderboardItem title="test"></LeaderboardItem>
-                <LeaderboardItem title="test"></LeaderboardItem>
-                <LeaderboardItem title="test"></LeaderboardItem>
-                <LeaderboardItem title="test"></LeaderboardItem>
+                <LeaderboardItem link='headline' title="most upvoted headlines"></LeaderboardItem>
+                <LeaderboardItem link='entries' title="most upvoted entries"></LeaderboardItem>
+                <LeaderboardItem link='upvoted' title="most upvoted in total"></LeaderboardItem>
+                <LeaderboardItem link='code' title="invitation codes"></LeaderboardItem>
             </div>
         </div>
     )
