@@ -1,0 +1,54 @@
+.messageleftframe{
+    width: 27.5%;
+    height: 100%;
+    padding-top: 11rem ;
+    padding-left: 7rem;
+    overflow: auto;
+    background-color: #edeeee;
+    display: flex;
+    flex-direction: column;
+
+    &__message{
+        width: 100%;
+        height: 5rem;
+        background-color: white;
+        margin-bottom: 0.5rem;
+        padding: 0 1rem;
+        align-items: center;
+        position: relative;
+
+
+        &__picture{
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50px;
+            position: relative;
+            top: 1rem;
+        }
+        &__message{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            position: relative;
+            left: 3rem;
+            bottom: 1.8rem;
+            height: 60%;
+            width: 75%;
+            margin-left: 1rem;
+            padding-bottom: 0.1rem;
+        }
+    }
+}
+
+.sarchmessage{
+    display: flex;
+    & input{
+        width: 90%;
+        border-radius: 19px;
+        border: none;
+        outline: none;
+        padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+        background-color: #edeeee;
+    }
+}

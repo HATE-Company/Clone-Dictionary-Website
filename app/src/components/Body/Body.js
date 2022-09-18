@@ -1,6 +1,7 @@
 import { Routes, Route, NavLink, useLocation } from "react-router-dom"
 import Entry from "../Entry/Entry"
 import Leaderboard from "../Leaderboard/Leaderboard"
+import Message from "../Messages/Messages"
 import "./body.scss"
 
 const Body = () => {
@@ -433,6 +434,35 @@ else if(location === 'code'){
              </div>
     </div>
     </>
+}>
+
+</Route>
+
+<Route path='/messages' element={
+
+<>
+    
+<div className="body">
+<div className="body__inner">
+           
+            <div className="searchmessage">
+                <h1>messages</h1>
+                <input placeholder="search in messages"></input>
+                <img src={require("../../assets/010-search-interface-symbol.png")}></img>
+            </div>
+            <Message></Message>
+            <Message></Message>
+            <Message></Message>
+            <Message></Message>
+            <Message></Message>
+
+          </div>
+        <div className="body__leaderboard">
+           
+            <Leaderboard></Leaderboard>
+        </div>
+</div>
+</>
 }>
 
 </Route>

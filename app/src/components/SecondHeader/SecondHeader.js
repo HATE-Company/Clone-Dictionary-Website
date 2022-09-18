@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./secondheader.scss"
 
 
@@ -43,7 +44,10 @@ const SecondHeader = (props) => {
                 <h1 className="hash" style={{
                     color:'#B026FF'
                 }}>#</h1>
+                <NavLink to='/createheadline' style={{textDecoration:'none', color:'black'}}>
+
                 <h1>create headline</h1>
+                </NavLink>
                 <h1 className="plus">+</h1>
 
             </div>

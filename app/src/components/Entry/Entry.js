@@ -17,7 +17,7 @@ const Entry = () => {
         setClickedd(true)
     }
     return(
-        <div className="entry" style={ clicked ? style:null}>
+        <div className="entry" >
             <div className="entry__text">
 
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
@@ -49,7 +49,7 @@ const Entry = () => {
                 </div>
                 </div>
 
-                <div className="replyarea "style={clicked ? styleReply : null}>
+                <div className="replyarea ">
                     <div className="replyarea__inner">
 
                         <input placeholder="your reply"></input>
