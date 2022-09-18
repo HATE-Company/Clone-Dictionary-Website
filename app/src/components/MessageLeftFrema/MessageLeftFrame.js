@@ -17,7 +17,7 @@ const MessageLeftFrame = () => {
     justifyContent:'space-between',
     position:'relative'
 }} className="messageleftframe__message sarchmessage">
-    <h1 style={{margin:'0.3rem'}}>messages</h1>
+    <h1 style={{marginBottom:'1rem'}}>messages</h1>
                   <input placeholder="search in messages"></input>
                   <img style={{
                     position:'absolute',

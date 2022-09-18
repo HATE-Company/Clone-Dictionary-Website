@@ -41,29 +41,36 @@ const LeftframeItem = (props) => {
 
                 <div className="leftframeitem__headline__item">
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
+                <p>18</p>
                 </div>
                 <div className="leftframeitem__headline__item">
                 <p>headline</p>
+                <p>51</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
                 <p>headline</p>
+                <p>21</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
+                <p>7</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
                 <p>headline</p>
+                <p>128</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
+                <p>352</p>
 
                 </div>
                 <div className="leftframeitem__headline__item">
                 <p>headline</p>
+                <p>51</p>
 
                 </div>
              

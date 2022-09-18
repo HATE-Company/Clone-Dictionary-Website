@@ -1,23 +1,26 @@
 .chatbox{
     width: 40%;
-    height: 75.9%;
+    height: 70.2%;
     background-color: #edeeee;
     margin-top: 12.5rem;
     margin-left: 6rem;
     box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.349);
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 5rem;
 
     &__footer{
-        height: 10rem;
+        height: 4.5rem;
         display: flex;
         align-items: center;
-        position: relative;
-        top: 10px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
         background-color: white;
         padding: 0 1.5rem;
         & img{
-            height: 39%;
+            height: 60%;
         }
         & textarea{
             background-color: #edeeee;
@@ -52,7 +55,7 @@
                 align-items: baseline;
                 position: relative;
                 padding-top: 1rem;
-                padding-right: 4rem;
+                padding-right: 2rem;
                 color: grey;
                 height: 100%;
             

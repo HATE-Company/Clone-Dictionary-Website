@@ -8,13 +8,13 @@ const MainHeader = (props) => {
 
             <div className="mainheader__logo">
                 <img src={require("../../assets/hate.png")}/>
-                <h1>hate club</h1>
+                <h1>&nbsp; &nbsp; &nbsp; &nbsp;hate club</h1>
 
             </div>
 
             <div className="mainheader__user">
                 <img src={require("../../assets/notify.png")}></img>
-                <NavLink to='/message' className="mainheader__user">
+                <NavLink to='/messages' className="mainheader__user">
                 <img src={require("../../assets/message_white.png")}></img>
                 </NavLink>
                 <img src={require("../../assets/avatar.png")}></img>

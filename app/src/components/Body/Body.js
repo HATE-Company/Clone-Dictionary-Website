@@ -38,7 +38,7 @@ else if(location === 'code'){
                     <h1>headline area includes up to 50 characters</h1>
                     <NavLink to='/create' className="body__inner__headlinearea__enterpost">
 
-                        <img src={require("../../assets/create-entry-icon.png")}></img>
+                        <img alt='test 1 2 ' title='Create Entry'src={require("../../assets/create-entry-icon.png")}></img>
 
                     </NavLink>
 
@@ -65,16 +65,16 @@ else if(location === 'code'){
             <div className="body__inner__leaderboardpage__board">
 
                 <div className="body__inner__leaderboardpage__board__item" style={{
-                    backgroundColor:'black', color: 'white', justifyContent:'flex-start', alignItems:'center'
+                    backgroundColor:'black', color: 'white', justifyContent:'flex-start', alignItems:'center', padding:'1rem 3rem',height:'4.1rem'
                 }}>
                     <img style={{
-                        marginRight:'1rem', height:'180%'
+                        marginRight:'1rem', height:'100%'
                     }} src={require("../../assets/best.png")}/>
                     <h1>{leaderboard}</h1>
 
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <h1>1</h1>
@@ -82,7 +82,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black',fontWeight:'bold'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -93,7 +93,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <h1>2</h1>
@@ -101,7 +101,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black',fontWeight:'bold'}} to='/'>nickname</NavLink>
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
 
@@ -111,7 +111,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <h1>3</h1>
@@ -119,7 +119,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black',fontWeight:'bold'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -130,7 +130,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <p>4</p>
@@ -138,7 +138,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -149,7 +149,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <p>5</p>
@@ -157,7 +157,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -168,7 +168,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <p>6</p>
@@ -176,7 +176,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -187,7 +187,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <p>7</p>
@@ -195,7 +195,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -206,7 +206,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <p>8</p>
@@ -214,7 +214,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -225,7 +225,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <p>9</p>
@@ -233,7 +233,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -244,7 +244,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
+                <div className="body__inner__leaderboardpage__board__item" style={{width:'85%', margin:'0 auto'}}>
                     <div className="body__inner__leaderboardpage__board__item__userinfo">
 
                         <p>10</p>
@@ -252,7 +252,7 @@ else if(location === 'code'){
                         <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
 
                         </div>
-                        <NavLink to='/'>nickname</NavLink>
+                        <NavLink style={{textDecoration:'none',color:'black'}} to='/'>nickname</NavLink>
 
                     </div>
                     <div className="body__inner__leaderboardpage__board__item__userkarma">
@@ -263,44 +263,7 @@ else if(location === 'code'){
                     </div>
                     
                 </div>
-                <div className="body__inner__leaderboardpage__board__item">
-                    <div className="body__inner__leaderboardpage__board__item__userinfo">
-
-                        <p>11</p>
-                        <img src={require("../../assets/uparrowleader.png")}/>
-                        <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
-
-                        </div>
-                        <NavLink to='/'>nickname</NavLink>
-
-                    </div>
-                    <div className="body__inner__leaderboardpage__board__item__userkarma">
-
-                    <p>xxx karma</p>
-                    
-
-                    </div>
-                    
-                </div>
-                <div className="body__inner__leaderboardpage__board__item">
-                    <div className="body__inner__leaderboardpage__board__item__userinfo">
-
-                        <p>12</p>
-                        <img src={require("../../assets/uparrowleader.png")}/>
-                        <div className="body__inner__leaderboardpage__board__item__userinfo__profile">
-
-                        </div>
-                        <NavLink to='/'>nickname</NavLink>
-
-                    </div>
-                    <div className="body__inner__leaderboardpage__board__item__userkarma">
-
-                    <p>xxx karma</p>
-                    
-
-                    </div>
-                    
-                </div>
+             
              
                 
                 
@@ -442,8 +405,8 @@ else if(location === 'code'){
 
 <>
     
-<div className="body">
-<div className="body__inner">
+<div className="body" style={{padding:'0'}}>
+<div className="body__inner " style={{position:'relative',right:'3rem'}}>
            
             <div className="searchmessage">
                 <h1>messages</h1>
@@ -457,10 +420,7 @@ else if(location === 'code'){
             <Message></Message>
 
           </div>
-        <div className="body__leaderboard">
-           
-            <Leaderboard></Leaderboard>
-        </div>
+      
 </div>
 </>
 }>

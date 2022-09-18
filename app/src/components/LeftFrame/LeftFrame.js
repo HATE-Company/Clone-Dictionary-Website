@@ -1,11 +1,16 @@
+import { useLocation } from "react-router-dom";
 import LeftframeItem from "../LeftframeItem/LeftframeItem";
 import "./leftframe.scss"
 
 
 const LeftFrame = ()=> {
+const location = useLocation().pathname.slice(1)
+const style = {
+        display:'none'
+}
 
         return(
-                <div className="leftframe">
+                <div className="leftframe "style={location==='messages' ? style :''}>
                     <div className="leftframe__items">
                     <LeftframeItem type='' tag='news'></LeftframeItem>
                     <LeftframeItem type='' tag='arts & culture'></LeftframeItem>

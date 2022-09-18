@@ -19,8 +19,8 @@ const Chatbox = () => {
                         </NavLink>
 
                         <div className="usernickkarma">
-                        <h1>nickname</h1>
-                        <p>xxx karma</p>
+                        <NavLink to='/' style={{textDecoration:'none', color:'black', fontWeight:'bold', position:'relative', top:'0.05rem'}}>nickname</NavLink>
+                        <p style={{position:'relative', bottom:'0.15rem'}}>xxx karma</p>
                         </div>
 
                         

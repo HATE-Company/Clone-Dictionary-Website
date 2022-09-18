@@ -39,10 +39,10 @@ const SecondHeader = (props) => {
 
             <div className="secondheader__create">
                 <h1 style={{
-                    color:'#B026FF'
+                    color:'#a636b1'
                 }}>create hashtag</h1>
                 <h1 className="hash" style={{
-                    color:'#B026FF'
+                    color:'#a636b1'
                 }}>#</h1>
                 <NavLink to='/createheadline' style={{textDecoration:'none', color:'black'}}>
 
