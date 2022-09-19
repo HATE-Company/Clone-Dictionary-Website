@@ -4,34 +4,38 @@
     display: flex;
     background-color: #edeeee;
     justify-content: space-between;
-    padding:1rem 7rem 0 3rem;
+    padding:1rem 7rem 0 0rem;
     margin-left: 34rem;
     position: relative;
     top: 9rem;
+    
 
 
     &__inner{
         height: max-content;
         width: 70%;
-    overflow: auto;
+        overflow: auto;
         display: flex;
         flex-direction: column;
+        position: relative;
+        padding-top: 4rem;
 
         &__headlinearea{
-            position: relative;
-            width: 100%;
+            width: 45%;
             height: 4rem;
+            z-index: 121;
             background-color: white;
-            margin: 1.5rem 0 1rem 0;
             display: flex;
             align-items: center;
-            padding-left: 4rem;
+            justify-content: space-between;
+            padding-left: 0.7rem;
             border-radius: 6px;
+            top: 9rem;
+            position: fixed;
 
 
             &__enterpost{
                 height: 100%;
-                position: absolute;
                 display: flex;
                 align-items: center;
                 padding-right: 1rem;
@@ -42,16 +46,24 @@
             }
 
             &__upvote{
-                position: absolute;
                 height: 100%;
                 display: flex;
-                flex-direction: column;
+                width: 40%;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
                 left: 1rem;
-                & img{
-                    height: 49%;
+
+                &__button{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    & img{
+                        height: 49%;
+                    }
                 }
+                
             }
         }
 
@@ -131,7 +143,7 @@
 
 
 .createentry__area{
-    width: 100%;
+    width: 99%;
     height: 25rem;
     background-color: white;
     border-radius: 9px;
@@ -155,8 +167,6 @@
         width: 100%;
         height: max-content;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 1rem;
         margin-top: 1rem;
 
@@ -193,6 +203,12 @@
         width: 95%!important;
         box-shadow: inset 0px 0px 18px -10px rgba(0,0,0,0.75);
         height: 90%!important;
+    }
+
+    & input[type=submit]{
+        position: absolute;
+        bottom: 1rem;
+        right: 1.2rem;
     }
 }
 

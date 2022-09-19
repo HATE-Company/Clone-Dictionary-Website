@@ -1,26 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import  { collection, addDoc, onSnapshot, query, orderBy } from "firebase/firestore";
+import { db } from "../../config/firebase";
 import "./entry.scss"
 
 
-const Entry = () => {
+const Entry = (props) => {
 
-    const [style, setStyle] = useState({
-        height:'17rem'
-    })
+    const [entries, setEntries] = useState([])
 
-    const [styleReply, setStyleReply] = useState({
-        display:'none'
-    })
-    const [clicked, setClickedd] = useState(false)
+    useEffect(()=> {
 
-    const reply = ()=>{
-        setClickedd(true)
+        const entryCollection = query(collection(db, 'Entries'));
+        onSnapshot(entryCollection, (snapshot) => {
+            setEntries(snapshot.docs.map(entries => {
+        
+                return {
+                    id: entries.id,
+                    ...entries.data()
+                }
+                
+              }))
+           
+        })
+
+    },[])
+
+    const entry = () => {
+        console.log(entries)
     }
+
     return(
-        <div className="entry" >
+        <div className="entry" onClick={entry}>
             <div className="entry__text">
 
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate</p>
+            <p>{props.entry}</p>
             </div>
 
             <div className="entry__footer">
@@ -32,15 +45,15 @@ const Entry = () => {
                     </div>
 
                     <div className="entry__footer__reply">
-                        <p>reply</p>
+                        <p style={{position:'relative', left:'-0.0rem'}}>reply</p>
                         <p> 23 replies</p>
 
                     </div>
                 </div>
                 <div className="entry__footer__right">
                 <div className="entry__footer__right__userinfo">
-                    <p>nickname</p>
-                    <p>dd/mm/yy &nbsp; &nbsp;--:--pm</p>
+                    <p>{props.author}</p>
+                    <p>{props.date} &nbsp; &nbsp;--:--pm</p>
 
                 </div>
                     <div className="entry__footer__right__userpicture">

@@ -1,5 +1,7 @@
-import { useState } from "react";
-import "./leftframeitem.scss"
+import { useEffect, useState } from "react";
+import "./leftframeitem.scss";
+import  { collection, doc, addDoc, onSnapshot, query, orderBy } from "firebase/firestore";
+import { db } from "../../config/firebase";
 
 const LeftframeItem = (props) => {
 
@@ -17,10 +19,11 @@ const LeftframeItem = (props) => {
             setState(!state)
         }
         else if(state === false){
+
             event.target.parentElement.parentElement.querySelector('.leftframeitem__headline').style.display = 'none'
             event.target.parentElement.style.background = ''
-        event.target.parentElement.style.color = 'black'
-        event.target.style.filter = 'invert(0%)'
+            event.target.parentElement.style.color = 'black'
+            event.target.style.filter = 'invert(0%)'
 
 
             event.target.style.rotate = '0deg'
@@ -30,6 +33,25 @@ const LeftframeItem = (props) => {
     }
 
 
+ const [headlines, setHeadlines] = useState([])
+ const [entry, setEntry] = useState([])
+
+    useEffect(()=> {
+
+        const headlineCollection = query(collection(db, 'headlines'));
+        onSnapshot(headlineCollection, (snapshot) => {
+            setHeadlines(snapshot.docs.map(headline => {
+                
+                return {
+                    id: headline.id,
+                    ...headline.data()
+                }
+                
+              }))
+           
+        })
+
+    },[])
 
     return(
         <div className="leftframeitem">
@@ -39,40 +61,13 @@ const LeftframeItem = (props) => {
             </div>
             <div className="leftframeitem__headline">
 
-                <div className="leftframeitem__headline__item">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
-                <p>18</p>
-                </div>
-                <div className="leftframeitem__headline__item">
-                <p>headline</p>
-                <p>51</p>
+               
+                {headlines.map(headline=>  <div className="leftframeitem__headline__item">
+                <p>{headline.headline}</p>
+                <p>{headline.entries}</p> </div>)}
+                
+              
 
-                </div>
-                <div className="leftframeitem__headline__item">
-                <p>headline</p>
-                <p>21</p>
-
-                </div>
-                <div className="leftframeitem__headline__item">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
-                <p>7</p>
-
-                </div>
-                <div className="leftframeitem__headline__item">
-                <p>headline</p>
-                <p>128</p>
-
-                </div>
-                <div className="leftframeitem__headline__item">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscin</p>
-                <p>352</p>
-
-                </div>
-                <div className="leftframeitem__headline__item">
-                <p>headline</p>
-                <p>51</p>
-
-                </div>
              
             </div>
         </div>

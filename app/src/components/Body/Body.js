@@ -1,8 +1,11 @@
-import { Routes, Route, NavLink, useLocation } from "react-router-dom"
+import { Routes, Route, NavLink, useLocation, Navigate, useNavigate } from "react-router-dom"
 import Entry from "../Entry/Entry"
 import Leaderboard from "../Leaderboard/Leaderboard"
 import Message from "../Messages/Messages"
+import  { collection, addDoc, onSnapshot, query, orderBy } from "firebase/firestore";
+import { db } from "../../config/firebase";
 import "./body.scss"
+import { useEffect, useState } from "react";
 
 const Body = () => {
 
@@ -21,21 +24,66 @@ else if(location === 'code'){
     leaderboard = 'invitation codes'
 }
 
+const [entries, setEntries] = useState([])
+const navigate = useNavigate();
+useEffect(()=> {
+
+    const entryCollection = query(collection(db, 'Entries'));
+    onSnapshot(entryCollection, (snapshot) => {
+        setEntries(snapshot.docs.map(entries => {
+    
+            return {
+                id: entries.id,
+                ...entries.data()
+            }
+            
+          }))
+       
+    })
+
+},[])
+
+const [inputText, setText] = useState("")
+const [inputAuthor, setAuthor] = useState("")
+const textHandler = (event) => {setText(event.target.value)}
+const authorHandler = (event) => {setAuthor(event.target.value)}
+
+const formhandler = (event) =>{event.preventDefault()
+
+    const dt = new Date()
+    addDoc(collection(db,'Entries'), {
+    entry: inputText,
+    author: 'nickname',
+    date: dt.getDate() + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear(),
+    query:9
+})
+return navigate('/')
+}
+
+
+
+
+
     return(
         <Routes>
 <Route path="/" element={
     <>
     
     <div className="body">
+        <div className="body__filler"></div>
     <div className="body__inner">
                 <div className="body__inner__headlinearea">
+
                     <div className="body__inner__headlinearea__upvote">
 
+                        <div className="body__inner__headlinearea__upvote__button">
                         <img src={require("../../assets/003-arrow-up.png")}></img>
                         <h1>125</h1>
+                        </div>
 
-                    </div>
                     <h1>headline area includes up to 50 characters</h1>
+                    </div>
+                    
                     <NavLink to='/create' className="body__inner__headlinearea__enterpost">
 
                         <img alt='test 1 2 ' title='Create Entry'src={require("../../assets/create-entry-icon.png")}></img>
@@ -43,8 +91,10 @@ else if(location === 'code'){
                     </NavLink>
 
                 </div>
-                <Entry></Entry>
-                <Entry></Entry>
+                {entries.map( entries => 
+
+                <Entry entry={entries.entry} author={entries.author} date={entries.date}></Entry>
+                    )}
             </div>
 
             <div className="body__leaderboard">
@@ -290,18 +340,15 @@ else if(location === 'code'){
  <div className="body">
  <div className="body__inner">
              <div className="body__inner__headlinearea">
-                 <div className="body__inner__headlinearea__upvote">
-                     <img src={require("../../assets/003-arrow-up.png")}></img>
-                     <h1>125</h1>
+             <div className="body__inner__headlinearea__upvote">
 
-                 </div>
-                 <h1>headline area includes up to 50 characters</h1>
-                 <div className="body__inner__headlinearea__enterpost">
+<div className="body__inner__headlinearea__upvote__button">
+<img src={require("../../assets/003-arrow-up.png")}></img>
+<h1>125</h1>
+</div>
 
-                     <img style={{visibility:'hidden'}} src={require("../../assets/create-entry-icon.png")}></img>
-                    
-
-                 </div>
+<h1>headline area includes up to 50 characters</h1>
+</div>
 
              </div>
            <div className="createentry__area">
@@ -316,17 +363,20 @@ else if(location === 'code'){
                 </div>
 
             </div>
-                <textarea placeholder="write here"></textarea>
+                <textarea onChange={textHandler} placeholder="write here"></textarea>
                 <div className="createentry__area__footer">
+                    <form  onSubmit={formhandler}>
+
                     <select>
                     <option>language</option>
                     <option>english</option>
                     <option>turkish</option>
                     <option>german</option>
                     </select>
-                    <NavLink to='/'className="createentry__area__footer__button">
-                        send
-                    </NavLink>
+                    <input type={'submit'} value='send' to='/'className="createentry__area__footer__button">
+                       
+                    </input>
+                    </form>
 
                 </div>
            </div>
@@ -334,7 +384,7 @@ else if(location === 'code'){
 
          <div className="body__leaderboard">
             
-             <Leaderboard></Leaderboard>
+             <Leaderboard />
          </div>
 </div>
 </>
