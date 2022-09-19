@@ -32,7 +32,7 @@ const Entry = () => {
                     </div>
 
                     <div className="entry__footer__reply">
-                        <img onClick={reply} src={require("../../assets/reply.png")}/>
+                        <p>reply</p>
                         <p> 23 replies</p>
 
                     </div>

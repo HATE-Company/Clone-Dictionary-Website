@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import LeftframeItem from "../LeftframeItem/LeftframeItem";
 import "./leftframe.scss"
@@ -9,8 +10,9 @@ const style = {
         display:'none'
 }
 
+
         return(
-                <div className="leftframe "style={location==='messages' ? style :''}>
+                <div className="leftframe "style={location==='messages' ? style :{display:'block'}}>
                     <div className="leftframe__items">
                     <LeftframeItem type='' tag='news'></LeftframeItem>
                     <LeftframeItem type='' tag='arts & culture'></LeftframeItem>
