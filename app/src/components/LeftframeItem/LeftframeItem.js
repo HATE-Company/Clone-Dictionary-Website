@@ -45,7 +45,7 @@ let headlines = DATA["HASHTAG_HEADLINES/MOST_UPVOTED_HEADLINES"].headlines
 
                
                 {headlines.map(headline=>  <div className="leftframeitem__headline__item">
-                <p>{headline.name}</p>
+                <p>{"Lorem ipsum dolor sit amet, consectetuer adipiscin"}</p>
                 <p>{headline.entrycount}</p> </div>)}
                 
               

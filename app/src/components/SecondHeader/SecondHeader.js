@@ -25,7 +25,7 @@ const SecondHeader = (props) => {
             <div className="secondheader__grid" >
             <div className="secondheader__search">
                 <input placeholder="headline, #tag, @writer"></input>
-
+                    <img src={require("../../assets/010-search-interface-symbol.png")}></img>
             </div>
 
             </div>
