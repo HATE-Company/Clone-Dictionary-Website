@@ -6,11 +6,11 @@ const MainHeader = (props) => {
     return(
         <div className="mainheader">
 
-            <div className="mainheader__logo">
+            <NavLink to='/' className="mainheader__logo">
                 <img src={require("../../assets/hate.png")}/>
                 <h1>&nbsp; &nbsp; &nbsp; &nbsp;hate club</h1>
 
-            </div>
+            </NavLink>
 
             <div className="mainheader__user">
                 <img src={require("../../assets/notify.png")}></img>

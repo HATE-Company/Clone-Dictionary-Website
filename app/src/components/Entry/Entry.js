@@ -28,7 +28,11 @@ const Entry = (props) => {
     const entry = () => {
         console.log(entries)
     }
+    const [upvote, setUpvote] = useState(props.upvote)
+    const upvoteHandler= () => {
+        return setUpvote(upvote+1)
 
+    }
     return(
         <div className="entry" onClick={entry}>
             <div className="entry__text">
@@ -40,8 +44,8 @@ const Entry = (props) => {
                 <div className="entry__footer__left">
 
                     <div className="entry__footer__upvote">
-                    <img src={require("../../assets/003-arrow-up.png")}></img>
-                    <h1>85</h1>
+                    <img onClick={upvoteHandler} src={require("../../assets/003-arrow-up.png")}></img>
+                    <h1>{upvote}</h1>
                     </div>
 
                     <div className="entry__footer__reply">

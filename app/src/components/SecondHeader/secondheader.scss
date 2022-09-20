@@ -16,8 +16,9 @@
         align-items: center;
         justify-content: space-between;
         height: 100%;
-        width: 24%;
+        width: 33.3%;
 
+        
         &__item{
             display: flex;
             height: 100%;
@@ -32,7 +33,9 @@
 
     &__search{
         height: 70%;
-        width: 40%;
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
         position: relative;
 
         & img{
@@ -59,7 +62,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 18%;
+        width: 33.3%;
     }
 }
 

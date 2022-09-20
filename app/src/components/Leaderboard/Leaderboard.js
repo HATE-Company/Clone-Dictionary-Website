@@ -1,12 +1,13 @@
+import { useLocation } from "react-router-dom";
 import LeaderboardItem from "../LeaderboardItem/LeaderboardItem";
 import "./leaderboard.scss"
 
 
 
 const Leaderboard = () => {
-
+const location = useLocation().pathname.slice(1)
     return(
-        <div className="leaderboard">
+        <div className="leaderboard" style={location.includes('messages' || 'headline' || 'entries' || 'upvoted' || 'code' )?{display:'none'}:{display:'blok'}}>
             <div className="leaderboard__title">
                 <img src={require("../../assets/best.png")}></img>
                 <h1>leaderboards</h1>

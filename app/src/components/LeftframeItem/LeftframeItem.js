@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./leftframeitem.scss";
 import  { collection, doc, addDoc, onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from "../../config/firebase";
-
+import DATA from "../../data/data.json"
 const LeftframeItem = (props) => {
 
     const [state, setState] = useState(true)
@@ -33,25 +33,7 @@ const LeftframeItem = (props) => {
     }
 
 
- const [headlines, setHeadlines] = useState([])
- const [entry, setEntry] = useState([])
-
-    useEffect(()=> {
-
-        const headlineCollection = query(collection(db, 'headlines'));
-        onSnapshot(headlineCollection, (snapshot) => {
-            setHeadlines(snapshot.docs.map(headline => {
-                
-                return {
-                    id: headline.id,
-                    ...headline.data()
-                }
-                
-              }))
-           
-        })
-
-    },[])
+let headlines = DATA["HASHTAG_HEADLINES/MOST_UPVOTED_HEADLINES"].headlines
 
     return(
         <div className="leftframeitem">
@@ -63,8 +45,8 @@ const LeftframeItem = (props) => {
 
                
                 {headlines.map(headline=>  <div className="leftframeitem__headline__item">
-                <p>{headline.headline}</p>
-                <p>{headline.entries}</p> </div>)}
+                <p>{headline.name}</p>
+                <p>{headline.entrycount}</p> </div>)}
                 
               
 

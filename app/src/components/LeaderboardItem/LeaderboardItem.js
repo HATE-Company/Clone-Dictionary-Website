@@ -8,6 +8,7 @@ const LeaderboardItem = (props) => {
     const [state, setState] = useState(true)
 
     const dropdown = (event) => {
+
         if(state == true){
 
             event.target.parentElement.parentElement.querySelector('.leaderboarditem__list').style.display = 'block'
@@ -18,8 +19,6 @@ const LeaderboardItem = (props) => {
             event.target.parentElement.parentElement.querySelector('.leaderboarditem__list').style.display = 'none'
             setState(true)
             event.target.style.rotate = '0deg'
-
-
         }
     }
 

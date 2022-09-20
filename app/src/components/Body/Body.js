@@ -10,18 +10,21 @@ import { useEffect, useState } from "react";
 const Body = () => {
 
 const location = useLocation().pathname.slice(1)
-let leaderboard = ""
-if(location === 'headline'){
-    leaderboard = 'most upvoted headlines'
+let leaderboard = "white"
+let leaderboard2 = "white"
+let leaderboard3 = "white"
+let leaderboard4 = "white"
+if(location === 'total'){
+    leaderboard = 'rgb(166, 54, 177)'
 }
 else if(location === 'entries'){
-    leaderboard = 'most upvoted entries'
+    leaderboard2 = 'rgb(166, 54, 177)'
 }
 else if(location === 'upvoted'){
-    leaderboard = 'most upvoted in total'
+    leaderboard3 = 'rgb(166, 54, 177)'
 }
 else if(location === 'code'){
-    leaderboard = 'invitation codes'
+    leaderboard4 = 'rgb(166, 54, 177)'
 }
 
 const [entries, setEntries] = useState([])
@@ -54,12 +57,12 @@ const formhandler = (event) =>{event.preventDefault()
     addDoc(collection(db,'Entries'), {
     entry: inputText,
     author: 'nickname',
+    upvote:0,
     date: dt.getDate() + "/" + (dt.getMonth() + 1) + "/" + dt.getFullYear(),
     query:9
 })
 return navigate('/')
 }
-
 
 
 
@@ -93,13 +96,13 @@ return navigate('/')
                 </div>
                 {entries.map( entries => 
 
-                <Entry entry={entries.entry} author={entries.author} date={entries.date}></Entry>
+                <Entry entry={entries.entry} upvote={entries.upvote} author={entries.author} date={entries.date}></Entry>
                     )}
             </div>
-
             <div className="body__leaderboard">
                 <Leaderboard></Leaderboard>
             </div>
+
 </div>
 </>
 }>
@@ -110,17 +113,21 @@ return navigate('/')
     <div className="body__leaderboardpage">
 
     
-        <div className="body__inner__leaderboardpage">
+        <div className="body__inner__leaderboardpage" >
 
-            <div className="body__inner__leaderboardpage__board">
+            <div className="body__inner__leaderboardpage__board ">
 
                 <div className="body__inner__leaderboardpage__board__item" style={{
-                    backgroundColor:'black', color: 'white', justifyContent:'flex-start', alignItems:'center', padding:'1rem 3rem',height:'4.1rem'
+                    backgroundColor:'black', color: 'white', display:'flex',justifyContent:'space-between', alignItems:'center', padding:'1rem 0rem',height:'4.1rem',width:'100%', padding:'1rem 2.5rem'
                 }}>
-                    <img style={{
+                    {/* <img style={{
                         marginRight:'1rem', height:'100%'
-                    }} src={require("../../assets/best.png")}/>
-                    <h1>{leaderboard}</h1>
+                    }} src={require("../../assets/best.png")}/> */}
+                    <NavLink className='leaderboardlist' style={{textDecoration:'none', color:leaderboard, fontWeight:'bolder'}} to='/total'>most upvoted headlines </NavLink>
+                    <NavLink className='leaderboardlist' style={{textDecoration:'none', color:leaderboard2, fontWeight:'bolder'}} to='/entries'> &nbsp;most upvoted entries </NavLink>
+                    <NavLink className='leaderboardlist' style={{textDecoration:'none', color:leaderboard3, fontWeight:'bolder'}} to='/upvoted'> &nbsp;most upvoted in total </NavLink>
+                    <NavLink className='leaderboardlist' style={{textDecoration:'none', color:leaderboard4, fontWeight:'bolder'}} to='/code'> &nbsp;invitation codes </NavLink>
+                    <h1></h1>
 
                     
                 </div>
@@ -321,7 +328,8 @@ return navigate('/')
                         
             </div>
             <div className="body__leaderboard" style={{
-                paddingTop:'0'
+                paddingTop:'0',
+                display:'none'
             }}>
                 <Leaderboard></Leaderboard>
             </div>
@@ -339,7 +347,7 @@ return navigate('/')
     
  <div className="body">
  <div className="body__inner">
-             <div className="body__inner__headlinearea">
+             <div className="body__inner__headlinearea" style={{width:'45.6%'}}>
              <div className="body__inner__headlinearea__upvote">
 
 <div className="body__inner__headlinearea__upvote__button">
@@ -351,9 +359,9 @@ return navigate('/')
 </div>
 
              </div>
-           <div className="createentry__area">
+           <div className="createentry__area" style={{width:'100%'}}>
             <div className="createentry__area__header">
-                <div style={{display:'flex', alignItems:'center', width:'20%', justifyContent:'space-between'}}>
+                <div style={{display:'flex', alignItems:'center', width:'17%', justifyContent:'space-between'}}>
 
                 <img src={require("../../assets/create-entry-icon.png")}></img>
                 <h1>create a entry</h1>
@@ -401,9 +409,9 @@ return navigate('/')
                 
     
                  
-               <div className="createheadline__area">
+               <div className="createheadline__area" style={{borderRadius:'9px 9px 0 0'}}>
                 <div className="createheadline__area__header">
-                    <div style={{display:'flex', alignItems:'center', width:'23%', justifyContent:'space-between'}}>
+                    <div style={{display:'flex', alignItems:'center', width:'18%', justifyContent:'space-between'}}>
     
                     <img src={require("../../assets/plus.png")} ></img>
                     <h1>create a headline</h1>
@@ -433,13 +441,40 @@ return navigate('/')
                         <option>crypto</option>
                         </select>
                         </div>
-                        <NavLink to='/'className="createheadline__area__footer__button">
-                            send
-                        </NavLink>
+                       
     
                     </div>
                </div>
+               <div className="createentry__area" style={{width:'100%'}}>
+            <div className="createentry__area__header" >
+                <div style={{display:'flex', alignItems:'center', width:'16%', justifyContent:'space-between'}}>
+
+                <img src={require("../../assets/create-entry-icon.png")}></img>
+                <h1>create a entry</h1>
+                </div>
+                <div>
+                </div>
+
+            </div>
+                <textarea onChange={textHandler} placeholder="write here"></textarea>
+                <div className="createentry__area__footer">
+                    <form  onSubmit={formhandler}>
+
+                    <select>
+                    <option>language</option>
+                    <option>english</option>
+                    <option>turkish</option>
+                    <option>german</option>
+                    </select>
+                    <input type={'submit'} value='send' to='/'className="createentry__area__footer__button">
+                       
+                    </input>
+                    </form>
+
+                </div>
+           </div>
              </div>
+            
     
              <div className="body__leaderboard">
                 
@@ -457,7 +492,7 @@ return navigate('/')
     
 <div className="body" style={{padding:'0'}}>
 <div className="body__inner " style={{position:'relative',right:'3rem'}}>
-           
+           <div style={{marginTop:'4.5rem'}}></div>
             <div className="searchmessage">
                 <h1>messages</h1>
                 <input placeholder="search in messages"></input>

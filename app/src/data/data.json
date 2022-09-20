@@ -1,0 +1,199 @@
+{"HASHTAG":
+{
+  "id": "f9fd41d5-ff46-40e0-822a-91eb68e549d9",
+  "name": "culture",
+  "cdate": "2022-01-01 00:00",
+  "cuser": "33c52de2-64c5-40e7-bb6a-8bdf53fc35f6",
+  "headlinecount": 5
+},
+"USER":
+{
+  "id": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+  "username": "burcu",
+  "cdate": "2022-01-01 00:00",
+  "karma": 35,
+  "upcount": 8
+},
+"HEADLINE_SIMPLE":
+{
+  "id": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+  "name": "headline1",
+  "cdate": "2022-01-01 00:00",
+  "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+  "entrycount": 64,
+  "upcount": 16
+},
+"ENTRY_SIMPLE":
+{
+  "id": "0ccab5b9-f0f0-4ee6-8fa2-5cd57167f85b",
+  "headlineid": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+  "cdate": "2022-01-01 00:00",
+  "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+  "content": "headline1 is a nice one",
+  "commentcount": 8,
+  "upcount": 32
+},
+"HASHTAGS":
+{
+  "hashtags": [
+    {
+      "id": "f9fd41d5-ff46-40e0-822a-91eb68e549d1",
+      "name": "news",
+      "cdate": "2022-01-01 00:00",
+      "cuser": "33c52de2-64c5-40e7-bb6a-8bdf53fc35f6",
+      "headlinecount": 5
+    },
+    {
+      "id": "f9fd41d5-ff46-40e0-822a-91eb68e549d9",
+      "name": "culture",
+      "cdate": "2022-01-01 00:00",
+      "cuser": "33c52de2-64c5-40e7-bb6a-8bdf53fc35f6",
+      "headlinecount": 5
+    },
+    {
+        "id": "f9fd41d5-ff46-40e0-822a-91eb68e549d10",
+        "name": "society",
+        "cdate": "2022-01-01 00:00",
+        "cuser": "33c52de2-64c5-40e7-bb6a-8bdf53fc35f6",
+        "headlinecount": 5
+      },
+      {
+        "id": "f9fd41d5-ff46-40e0-822a-91eb68e549d12",
+        "name": "sport",
+        "cdate": "2022-01-01 00:00",
+        "cuser": "33c52de2-64c5-40e7-bb6a-8bdf53fc35f6",
+        "headlinecount": 5
+      }
+  ]
+},
+"HASHTAG_HEADLINES/MOST_UPVOTED_HEADLINES":
+{
+  "headlines": [
+    {
+      "id": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+      "name": "headline1",
+      "cdate": "2022-01-01 00:00",
+      "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+      "entrycount": 64,
+      "upcount": 16
+    },
+    {
+      "id": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+      "name": "headline1",
+      "cdate": "2022-01-01 00:00",
+      "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+      "entrycount": 64,
+      "upcount": 16
+    },
+    {
+        "id": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+        "name": "headline1",
+        "cdate": "2022-01-01 00:00",
+        "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+        "entrycount": 64,
+        "upcount": 16
+      },
+      {
+        "id": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+        "name": "headline1",
+        "cdate": "2022-01-01 00:00",
+        "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+        "entrycount": 64,
+        "upcount": 16
+      },
+      {
+        "id": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+        "name": "headline1",
+        "cdate": "2022-01-01 00:00",
+        "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+        "entrycount": 64,
+        "upcount": 16
+      }
+  ]
+},
+
+"HEADLINE_ENTRY_VIEW":
+{
+  "id": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+  "name": "headline1",
+  "cdate": "2022-01-01 00:00",
+  "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+  "entrycount": 64,
+  "entries": [
+    {
+      "id": "0ccab5b9-f0f0-4ee6-8fa2-5cd57167f85b",
+      "headlineid": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+      "cdate": "2022-01-01 00:00",
+      "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+      "content": "headline1 is a nice one",
+      "commentcount": 8,
+      "upcount": 32
+    },
+    {
+      "id": "6306b427-4f2e-4a72-a82a-a6fb0a94110b",
+      "headlineid": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+      "cdate": "2022-02-02 00:00",
+      "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+      "content": "i agree. headline1 is a nice one",
+      "commentcount": 2,
+      "upcount": 4
+    }
+  ],
+  "upcount": 16
+},
+"MOST_UPVOTED_ENTRIES":
+{
+  "entries": [
+    {
+      "id": "0ccab5b9-f0f0-4ee6-8fa2-5cd57167f85b",
+      "headlineid": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+      "cdate": "2022-01-01 00:00",
+      "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+      "content": "headline1 is a nice one",
+      "commentcount": 8,
+      "upcount": 32
+    },
+    {
+      "id": "6306b427-4f2e-4a72-a82a-a6fb0a94110b",
+      "headlineid": "2031a30b-85f4-4b4c-9c5f-89a6c24eb327",
+      "cdate": "2022-02-02 00:00",
+      "cuser": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+      "content": "i agree. headline1 is a nice one",
+      "commentcount": 2,
+      "upcount": 4
+    }
+  ]
+},
+"MOST_UPVOTED_IN_TOTAL":
+{
+  "users": [
+    {
+      "id": "254a38da-96fe-4ee0-aee8-5fe8d8b550d1",
+      "username": "burcu",
+      "cdate": "2022-01-01 00:00",
+      "karma": 35,
+      "upcount": 16
+    },
+    {
+      "id": "254a38da-96fe-4ee0-aee8-5fe8d8b550df",
+      "username": "burcu",
+      "cdate": "2022-01-01 00:00",
+      "karma": 35,
+      "upcount": 8
+    }
+  ]
+},
+"INVITATION_CODES":
+{
+  "invites": [
+    {
+      "id": "2c5e7466-f8e6-4faf-b2fd-a9e75a85ec29",
+      "code": "Y5G8FYMIZOC8BN9A"
+    },
+    {
+      "id": "1271b7f2-f380-44f1-a0a8-9ef06d4ccd46",
+      "code": "OCEVCJOCCOFAPQSC"
+    }
+  ]
+}
+}
