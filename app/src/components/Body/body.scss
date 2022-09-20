@@ -21,7 +21,7 @@
         padding-top: 4rem;
 
         &__headlinearea{
-            width: 43.5%;
+            width: 38.7%;
             height: 4rem;
             z-index: 121;
             background-color: white;
@@ -48,7 +48,7 @@
             &__upvote{
                 height: 100%;
                 display: flex;
-                width: 40%;
+                width: 45%;
                 align-items: center;
                 justify-content: space-between;
                 left: 1rem;
@@ -151,7 +151,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+
+    & form{
+        height: 100%;
+        width: 100%;
+    }
 
     &__header{
         width: 100%;
@@ -166,7 +170,7 @@
 
     &__footer{
         width: 100%;
-        height: max-content;
+        height: 65%;
         display: flex;
         margin-bottom: 1rem;
         margin-top: 1rem;
@@ -192,31 +196,32 @@
             background-color: black;
         }
     }
+  
 
-    & textarea{
-        margin-top: 0rem;
-        border-radius: 9px;
-        background-color: #edeeee;
-        outline: none;
-        border: none;
-        padding: 1rem;
-        resize: none;
-        width: 95%!important;
-        box-shadow: inset 0px 0px 18px -10px rgba(0,0,0,0.75);
-        height: 90%!important;
-    }
-
+        & textarea{
+            border-radius: 9px;
+            background-color: #edeeee;
+            outline: none;
+            border: none;
+            padding: 1rem;
+            resize: none;
+            width: 100%!important;
+            box-shadow: inset 0px 0px 18px -10px rgba(0,0,0,0.75);
+            height: 100%!important;
+        }
+        
+   
     & input[type=submit]{
         position: absolute;
         bottom: 1rem;
-        right: 1.5rem;
+        right: 6.6rem;
     }
 }
 
 
 .createheadline__area{
-    margin-top: -2.4rem;
-    width: 100%;
+    margin-top: -2.6rem;
+    width: 87%;
     height: 12rem;
     background-color: white;
     border-radius: 9px;
@@ -253,6 +258,8 @@
             outline: none;
         }
         padding: 0 1.2rem;
+
+
         &__button{
             width: 10%;
             height: max-content;
@@ -310,9 +317,14 @@
         outline: none;
     }
 }
-
-.leaderdboardlist{
-
+.leaderboardlist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.leaderboardlist{
+    width: 100%;
     &:hover{
         color: rgb(166, 54, 177)!important;
     }

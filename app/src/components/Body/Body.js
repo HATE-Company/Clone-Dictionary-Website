@@ -346,8 +346,9 @@ return navigate('/')
  <>
     
  <div className="body">
+    <div className="body__filler"></div>
  <div className="body__inner">
-             <div className="body__inner__headlinearea" style={{width:'45.6%'}}>
+             <div className="body__inner__headlinearea" style={{width:'38.8%'}}>
              <div className="body__inner__headlinearea__upvote">
 
 <div className="body__inner__headlinearea__upvote__button">
@@ -359,9 +360,9 @@ return navigate('/')
 </div>
 
              </div>
-           <div className="createentry__area" style={{width:'100%'}}>
+           <div className="createentry__area" style={{width:'85%', borderRadius:'9px'}}>
             <div className="createentry__area__header">
-                <div style={{display:'flex', alignItems:'center', width:'17%', justifyContent:'space-between'}}>
+                <div style={{display:'flex', alignItems:'center', width:'19%', justifyContent:'space-between'}}>
 
                 <img src={require("../../assets/create-entry-icon.png")}></img>
                 <h1>create a entry</h1>
@@ -371,9 +372,10 @@ return navigate('/')
                 </div>
 
             </div>
-                <textarea onChange={textHandler} placeholder="write here"></textarea>
+
                 <div className="createentry__area__footer">
                     <form  onSubmit={formhandler}>
+                <textarea required='required' onChange={textHandler} placeholder="write here"></textarea>
 
                     <select>
                     <option>language</option>
@@ -381,7 +383,7 @@ return navigate('/')
                     <option>turkish</option>
                     <option>german</option>
                     </select>
-                    <input type={'submit'} value='send' to='/'className="createentry__area__footer__button">
+                    <input type={'submit'} style={{right:'9.2rem'}} value='send' to='/' className="createentry__area__footer__button">
                        
                     </input>
                     </form>
@@ -405,13 +407,14 @@ return navigate('/')
      <>
     
      <div className="body">
+
      <div className="body__inner">
                 
     
                  
                <div className="createheadline__area" style={{borderRadius:'9px 9px 0 0'}}>
                 <div className="createheadline__area__header">
-                    <div style={{display:'flex', alignItems:'center', width:'18%', justifyContent:'space-between'}}>
+                    <div style={{display:'flex', alignItems:'center', width:'21%', justifyContent:'space-between'}}>
     
                     <img src={require("../../assets/plus.png")} ></img>
                     <h1>create a headline</h1>
@@ -421,7 +424,7 @@ return navigate('/')
                     </div>
     
                 </div>
-                    <textarea placeholder="write here"></textarea>
+                    <textarea maxlength="50" required='required' placeholder="write here"></textarea>
                     <div className="createheadline__area__footer">
                         <div>
 
@@ -445,9 +448,9 @@ return navigate('/')
     
                     </div>
                </div>
-               <div className="createentry__area" style={{width:'100%'}}>
+               <div className="createentry__area" style={{width:'87%'}}>
             <div className="createentry__area__header" >
-                <div style={{display:'flex', alignItems:'center', width:'16%', justifyContent:'space-between'}}>
+                <div style={{display:'flex', alignItems:'center', width:'19%', justifyContent:'space-between'}}>
 
                 <img src={require("../../assets/create-entry-icon.png")}></img>
                 <h1>create a entry</h1>
@@ -456,9 +459,9 @@ return navigate('/')
                 </div>
 
             </div>
-                <textarea onChange={textHandler} placeholder="write here"></textarea>
                 <div className="createentry__area__footer">
                     <form  onSubmit={formhandler}>
+                <textarea  required='required' onChange={textHandler} placeholder="write here"></textarea>
 
                     <select>
                     <option>language</option>
@@ -466,7 +469,7 @@ return navigate('/')
                     <option>turkish</option>
                     <option>german</option>
                     </select>
-                    <input type={'submit'} value='send' to='/'className="createentry__area__footer__button">
+                    <input type={'submit'} style={{right:'8rem'}} value='send' to='/'className="createentry__area__footer__button">
                        
                     </input>
                     </form>
