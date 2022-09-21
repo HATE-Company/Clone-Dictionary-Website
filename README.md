@@ -1,3 +1,3 @@
-# Clone-Dictionary-Website
+# Clone-Website-1
 
-Creating a Headline Page [Only Gold NFT Owners] | Mert#5587 
+Clone-Website-1 | Mert#5587 
